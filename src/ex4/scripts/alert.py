@@ -37,12 +37,14 @@ def main():
         msg.data = signal
 
         if temp < lowerLimit:
+            rospy.loginfo('ALERT: Lower limit!')
             alert.limit = 'lower limit'
             alert.temp_diff = lowerLimit - temp
             alert.time = rospy.Time.now().to_sec() - t0
             alert.state = True
 
         elif temp > upperLimit:
+            rospy.loginfo('ALERT: Upper limit!')
             alert.limit = 'upper limit'
             alert.temp_diff = temp - upperLimit
             alert.time = rospy.Time.now().to_sec() - t0
