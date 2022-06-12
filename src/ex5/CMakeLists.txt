@@ -58,6 +58,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
   FILES
   Dodaj.srv
+  Auth.srv
+  Sinus.srv
 )
 
 ## Generate actions in the 'action' folder

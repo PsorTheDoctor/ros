@@ -1,0 +1,4 @@
+string login
+string password
+---
+bool success

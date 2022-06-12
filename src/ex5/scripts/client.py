@@ -7,8 +7,8 @@ def main():
 	rospy.init_node('client') 
 	rospy.wait_for_service('add') 
 	try: 
-		dodaj_proxy = rospy.ServiceProxy('add', Dodaj) 
-		res = dodaj_proxy(1.0, 2.0) 
+		add_proxy = rospy.ServiceProxy('add', Dodaj)
+		res = add_proxy(1.0, 2.0)
 		rospy.loginfo("%f" % res.suma) 
 		
 	except rospy.ServiceException as e: 
