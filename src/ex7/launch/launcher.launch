@@ -1,0 +1,11 @@
+<launch>
+	<node pkg="ex7" type="zrodlo_ramp.py" name="src1">
+		<remap from="u" to="x1" />
+	</node>
+	<node pkg="ex7" type="zrodlo_sin.py" name="src2">
+		<remap from="u" to="x2" />
+	</node>
+	<node pkg="ex7" type="sumator.py" name="sum">
+		<remap from="u" to="object" />
+	</node>
+</launch>

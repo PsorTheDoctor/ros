@@ -1,0 +1,15 @@
+<launch>
+	<node pkg="ex7" type="zrodlo_ramp.py" name="src">
+		<remap from="u" to="w" />
+	</node>
+	<node pkg="ex7" type="sumator.py" name="sum">
+		<remap from="x1" to="w" />
+		<remap from="x2" to="y1" />
+		<remap from="y" to="e" />
+	</node>
+	<node pkg="ex7" type="regulator_pid.py" name="controller">
+	</node>
+	<node pkg="ex7" type="obiekt_inercja.py" name="object">
+		<remap from="y" to="y1" />
+	</node>
+</launch>
