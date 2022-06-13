@@ -149,7 +149,7 @@ add_executable(turtle src/turtle.cpp)
 
 set_target_properties(my_publisher PROPERTIES OUTPUT_NAME my_publisher PREFIX "")
 set_target_properties(my_subscriber PROPERTIES OUTPUT_NAME my_subscriber PREFIX "")
-set_target_properties(turtle PROPERTIES OUTPUT_NAME my_subscriber PREFIX "")
+set_target_properties(turtle PROPERTIES OUTPUT_NAME turtle PREFIX "")
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
@@ -167,6 +167,9 @@ target_link_libraries(my_publisher
   ${catkin_LIBRARIES}
 )
 target_link_libraries(my_subscriber
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(turtle
   ${catkin_LIBRARIES}
 )
 
