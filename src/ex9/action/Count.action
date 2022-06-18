@@ -1,5 +1,6 @@
-int32 wartosc
+int32 value
+int32 step
 ---
-int32[] sekwencja
+int32[] sequence
 ---
-int32[] sekwencja
+int32[] sequence
