@@ -39,7 +39,7 @@ class CountServer:
 
 def main():
 	rospy.init_node("count_server")
-	count_server = CountServer('count')
+	CountServer('count')
 	rospy.spin()
 
 
